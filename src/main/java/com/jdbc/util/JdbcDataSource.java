@@ -19,6 +19,11 @@ public class JdbcDataSource {
 			dataSource.setUsername("root");
 			dataSource.setPassword("admin");
 			dataSource.setUrl("jdbc:mysql://localhost:3306/vehiculosjdbc");
+			
+			dataSource.setInitialSize(20);
+			dataSource.setMaxIdle(10);
+			dataSource.setMaxTotal(20);
+			dataSource.setMaxWaitMillis(50000);
 		}
 
 		return dataSource;

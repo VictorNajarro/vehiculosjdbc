@@ -14,7 +14,7 @@
 
 	<a href="vehiculoController?opcion=registro">Crear Vehículo</a>
 
-	<table border="2" bgcolor="#65C0E9">
+	<p><table border="2" bgcolor="#65C0E9">
 		<tr>
 			<th>Placa</th>
 			<th>Marca</th>
@@ -33,8 +33,10 @@
 				<td><c:out value="${vehiculo.anio}"></c:out></td>
 				<td><c:out value="${vehiculo.cilindraje}"></c:out></td>
 				<td><c:out value="${vehiculo.consumo}"></c:out></td>
-				<td><a href="vehiculoController?opcion=editar&id=<c:out value="${vehiculo.id}"></c:out>">Editar</a></td>
-				<td><a href="vehiculoController?opcion=eliminar&id=<c:out value="${vehiculo.id}"></c:out>">Eliminar</a></td>
+				<td><a
+					href="vehiculoController?opcion=editar&id=<c:out value="${vehiculo.id}"></c:out>">Editar</a></td>
+				<td><a
+					href="vehiculoController?opcion=eliminar&id=<c:out value="${vehiculo.id}"></c:out>">Eliminar</a></td>
 			</tr>
 		</c:forEach>
 	</table>
