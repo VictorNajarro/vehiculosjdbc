@@ -97,24 +97,6 @@ public class VehiculoController extends HttpServlet {
 
 			mostrarPagina(request, response, "index.jsp");
 
-		} else if (opcion.equals("editar")) {
-			mostrarPagina(request, response, "editar.jsp");
-			Vehiculo vehiculo = new Vehiculo();
-			VehiculoDAO vehiculoDAO = new VehiculoDAO();
-			vehiculo.setId(Integer.parseInt(request.getParameter("id")));
-			vehiculo = llenarVehiculo(request);
-			try {
-				vehiculoDAO.update(vehiculo);
-				System.out.println("Registro editado satisfactoriamente...");
-				List<Vehiculo> lista = vehiculoDAO.getAll();
-				request.setAttribute("vehiculos", lista);
-
-				mostrarPagina(request, response, "index.jsp");
-
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-
 		} else if (opcion.equals("actualizar")) {
 			Vehiculo vehiculo = new Vehiculo();
 			VehiculoDAO vehiculoDAO = new VehiculoDAO();
